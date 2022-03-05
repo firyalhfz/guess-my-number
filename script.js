@@ -103,3 +103,15 @@ and make if the sccore is higher than highscore so we will save teh score into v
 so later if the score lower than highscore, nothing to do
 */
 
+//TODO 5
+/*
+Make the code more dry, 
+we can store the value that repeated into the variable
+we can use the variable function. and have the parameter according to each result. 
+for example: 
+const displayMessage = function(message){
+  document.querySelector('.message').textContent = message;
+}
+that is the function, and later we can use displayMessage('message)
+yeyy congratulation you finished to make game!!!!!!!
+*/
