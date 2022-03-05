@@ -14,7 +14,9 @@
 
 let secretNumber = Math.trunc(Math.random() * 20) + 1;
 let score = 20;
+let highscore = 0;
 
+//todo1
 document.querySelector('.check').addEventListener('click', function () {
   const guess = Number(document.querySelector('.guess').value);
   console.log(guess, typeof guess);
@@ -31,6 +33,14 @@ document.querySelector('.check').addEventListener('click', function () {
     document.querySelector('body').style.backgroundColor = '#60b347';
     document.querySelector('.number').style.width = '30rem';
 
+    //todo4
+    //set highscore
+    if(score > highscore){
+      highscore = score;
+      document.querySelector('.highscore').textContent = highscore;
+    }
+
+    //todo2
     //when guess is too high
   } else if (guess > secretNumber) {
     if (score > 0) {
@@ -54,6 +64,7 @@ document.querySelector('.check').addEventListener('click', function () {
   }
 });
 
+//todo3
 document.querySelector('.again').addEventListener('click', function () {
   secretNumber = Math.trunc(Math.random() * 20) + 1;
   score = 20;
@@ -83,3 +94,12 @@ Implement a game rest functionality, so that the player can make a new guess! He
 4. Also restore the original background color (#222) and number width (15rem)
 GOOD LUCK 😀
 */
+
+//TODO 4 
+/*
+Make highscore using if else statement, 
+we make in the if block when we guess right number,
+and make if the sccore is higher than highscore so we will save teh score into variable score,
+so later if the score lower than highscore, nothing to do
+*/
+
